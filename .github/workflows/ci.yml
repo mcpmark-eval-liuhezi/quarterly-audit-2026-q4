@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: No-op echo
+        run: echo "No-op CI check complete (manual trigger only)"
