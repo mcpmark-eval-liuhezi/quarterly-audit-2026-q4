@@ -47,17 +47,19 @@ Links:
 - Current branch: master
 - Working tree: clean (nothing to commit)
 - Most recent commit:
-  - Short hash: 914ed78
-  - Full hash: 914ed78f23d03b85cac61bd4dbe8f4fb16956c49
+  - Short hash: 3c54245
+  - Full hash: 3c54245d1ec850f0d3bc36cab971e08bf4962d27
   - Message: "Initial synthetic state"
   - Author: MCP World <synth@mcp-world.local>
-  - Date: 2026-10-20 03:41:34+00:00
+  - Date: 2026-10-20 05:00:19+00:00
+
+Note: an earlier version of these notes recorded baseline 914ed78 (2026-10-20 03:41:34+00:00). The scratch repository was subsequently re-seeded; the baseline above (3c54245) was re-read live at report time and is the operative quarter baseline.
 
 ## 4. Archive Repository & Workflow Status
 
 - Archive repository: **quarterly-audit-2026-q4** (public) — https://github.com/mcpmark-eval-liuhezi/quarterly-audit-2026-q4
 - Default branch: **main**
-- Verified branch list (actually enumerated, not assumed): `audit-log` (head 86752a5) and `main` (head 7ec45ca)
+- Verified branch list (actually enumerated, not assumed): `main` and `audit-log` (audit-log was created on top of the default branch)
 - `AUDIT.md` (this file) present on `audit-log`
 - `draft.md` placeholder was kept on `audit-log` while the notes were assembled, then removed via commit "Remove draft placeholder" (86752a5) — only the finished notes remain
 - CI workflow: `.github/workflows/ci.yml` on `main` — manual trigger only (`workflow_dispatch`), a checkout step plus a no-op echo
@@ -68,4 +70,4 @@ Links:
 ## 5. Notes
 
 - The archive repository lives under the organization `mcpmark-eval-liuhezi` rather than the personal account: personal repository creation was rejected by the token (403 Resource not accessible by personal access token), and the organization route was the permitted path.
-- Gist copy (`audit-2026-q4.md`): **could not be created** — `POST /gists` was rejected by the same token scope (403). The account holds no existing gists to update, and gists cannot be created under an organization. This repository (with AUDIT.md on `audit-log`) therefore serves as the permanent home for the 2026 Q4 GitHub-side report.
+- Gist copy (`audit-2026-q4.md`): **could not be created** — `POST /gists` was rejected by the token scope (403 Resource not accessible by personal access token). Re-verified this session: the account holds no existing gists (authenticated listing and the public user listing both returned empty), so there is nothing to update, and gists cannot be created under an organization. This repository (with AUDIT.md on `audit-log`) therefore serves as the permanent home for the 2026 Q4 GitHub-side report.
