@@ -57,11 +57,15 @@ Links:
 
 - Archive repository: **quarterly-audit-2026-q4** (public) — https://github.com/mcpmark-eval-liuhezi/quarterly-audit-2026-q4
 - Default branch: **main**
-- Working branch: **audit-log** (created on top of main, commit 18b10b8)
-- CI: `.github/workflows/ci.yml` on main — manual trigger only (`workflow_dispatch`), checkout + no-op echo
-- CI status: see Issue "Audit checklist" for registration confirmation and run count
+- Verified branch list (actually enumerated, not assumed): `audit-log` (head 86752a5) and `main` (head 7ec45ca)
+- `AUDIT.md` (this file) present on `audit-log`
+- `draft.md` placeholder was kept on `audit-log` while the notes were assembled, then removed via commit "Remove draft placeholder" (86752a5) — only the finished notes remain
+- CI workflow: `.github/workflows/ci.yml` on `main` — manual trigger only (`workflow_dispatch`), a checkout step plus a no-op echo
+- Workflow registration: **confirmed** — workflow id 390122267, name "CI", state `active`, path `.github/workflows/ci.yml`
+- Workflow run count: **0** (the workflow is manual-trigger-only and has never been dispatched)
+- Audit checklist: issue #1 "Audit checklist", closed as completed with a closing summary comment
 
 ## 5. Notes
 
-- The archive repository lives under the organization `mcpmark-eval-liuhezi` rather than the personal account: the token's personal repository-creation scope was rejected (403), and the organization route was the permitted path.
-- A gist copy of this summary is posted as `audit-2026-q4.md` (URL recorded in the audit checklist issue).
+- The archive repository lives under the organization `mcpmark-eval-liuhezi` rather than the personal account: personal repository creation was rejected by the token (403 Resource not accessible by personal access token), and the organization route was the permitted path.
+- Gist copy (`audit-2026-q4.md`): **could not be created** — `POST /gists` was rejected by the same token scope (403). The account holds no existing gists to update, and gists cannot be created under an organization. This repository (with AUDIT.md on `audit-log`) therefore serves as the permanent home for the 2026 Q4 GitHub-side report.
